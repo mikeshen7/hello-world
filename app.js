@@ -1,14 +1,18 @@
-let numWins = getData();
+main();
 
-for (let index = 0; index < 2; index++) {
-    if (!validation()){
+function main(){
+    alert("To enter this website, you must prove that you are a true Seahawks and Geno Smith fan");
+    numWins = getData();
+    let numTries = 1;
+    while (!validation()) {
         alert("Let's try that again")
+        numTries ++;
         numWins = getData();
+        if (numTries >= 3){break}
     }
 }
 
 function getData(){
-    alert("To enter this website, you must prove that you are a true Seahawks and Geno Smith fan");
     let data = Number(prompt("How many wins will the Seahawks have this year?"));
     return data;
 }
@@ -27,7 +31,7 @@ function validation(){
         document.write(numWins + "? Are you sure you're on the right website?  This is a Seahawk / Geno Smith FAN website");
         return true
     } else { // intermediate level of wins
-        document.write(numWins + "... You may enter, fair weather fan.");
+        document.write(numWins + "... You may enter this time, fair weather fan.");
         return true
     }
 }
