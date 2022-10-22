@@ -22,3 +22,10 @@ function yesButton(){
         ImageID.src = "no.gif"
         ImageID.style.display = "initial"
     }
+
+
+    if (condition) {
+        
+    } else {
+        
+    }
