@@ -5,10 +5,10 @@ function main(){
     numWins = getData();
     let numTries = 1;
     while (!validation()) {
+        if (numTries >= 3){break}
         alert("Let's try that again")
         numTries ++;
         numWins = getData();
-        if (numTries >= 3){break}
     }
 }
 
