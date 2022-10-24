@@ -1,12 +1,13 @@
-main();
-
 function main(){
     alert("To enter this website, you must prove that you are a true Seahawks and Geno Smith fan");
     numWins = getData();
     let numTries = 1;
     while (!validation()) {
-        if (numTries >= 3){break}
-        alert("Let's try that again")
+        if (numTries >= 999){            //up to 999 tries
+            alert("ok, you broke me");
+            break;
+        } 
+        alert("Let's try that again");
         numTries ++;
         numWins = getData();
     }
@@ -33,6 +34,19 @@ function validation(){
     } else { // intermediate level of wins
         document.write(numWins + "... You may enter this time, fair weather fan.");
         return true
+    }
+}
+
+function stars(){
+    let stars = prompt("How would you rate Geno's play this year (1-5 stars)");
+    // if bad entry, prompt again
+    while(stars < 1 || stars > 5){
+        stars = prompt("Bad entry.  Try again.  (1-5 stars)")
+    }
+    // Good entry: display the number of stars
+    for (let i = 0; i < stars; i++) {
+        document.write("<img src='star.png' alt='picture of star'></img>")
+        document.write(i+1)
     }
 }
 

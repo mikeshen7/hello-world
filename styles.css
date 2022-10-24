@@ -65,3 +65,8 @@ h2{
 .name img{
     min-height: 400px;
 }
+
+.star img{
+    display: inline;
+    width:20px;
+}
